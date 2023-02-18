@@ -16,6 +16,6 @@ function get_image_path($image): string {
     return $hrefImages;
 }
 
-In WordPress template .php :
+In WordPress template.php :
 get_image_path('test.png');
 </pre>
