@@ -17,5 +17,5 @@ function get_image_path($image): string {
 }
 
 In WordPress template .php :
-get_image_path('test.php');
+get_image_path('test.png');
 </pre>
