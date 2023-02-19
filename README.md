@@ -1,10 +1,16 @@
 # vite.config.js which works with WordPlate for better image loading
 
-<h2>CSS :</h2>
-<pre>background-image: url('../static/img/test.png');</pre>
+## Images call in CSS and PHP
 
-<h2>PHP :</h2>
-<pre>
+### CSS
+
+```
+background-image: url('../static/img/test.png');
+```
+
+### PHP
+
+```
 In functions.php :
 function get_image_path($image): string {
     if (is_array(wp_remote_get('http://localhost:5173/'))) {
@@ -12,10 +18,11 @@ function get_image_path($image): string {
     } else {
         $hrefImages = get_theme_file_uri("assets/img/$image");
     }
+return $hrefImages;
 
-    return $hrefImages;
 }
 
-In WordPress template.php :
+
+In template.php :
 get_image_path('test.png');
-</pre>
+```
